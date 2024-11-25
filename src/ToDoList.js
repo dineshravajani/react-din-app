@@ -73,42 +73,47 @@ function TodoList() {
           Add
         </button>
       </div>
-      <ul className="todo-list">
-        {todos.map((todo, index) => (
-          <li key={index} className="todo-item">
-            {editingIndex === index ? (
-              <>
-                <input
-                  type="text"
-                  value={editValue}
-                  onChange={handleEditChange}
-                  ref={editInputRef}
-                  className="edit-input"
-                />
-                <button className="save-btn" onClick={() => handleSave(index)}>
-                  Save
-                </button>
-              </>
-            ) : (
-              <>
-                <span className="todo-text">{todo}</span>
-                <button
-                  className="edit-btn"
-                  onClick={() => handleEdit(index)}
-                >
-                  Edit
-                </button>
-                <button
-                  className="delete-btn"
-                  onClick={() => handleDelete(index)}
-                >
-                  Delete
-                </button>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+      	{todos.length == 0 ? (<p className="no-todo-message">No todo are created</p>) : 
+	  		(
+				<ul className="todo-list">
+				
+				{todos.map((todo, index) => (
+					<li key={index} className="todo-item">
+					{editingIndex === index ? (
+						<>
+						<input
+							type="text"
+							value={editValue}
+							onChange={handleEditChange}
+							ref={editInputRef}
+							className="edit-input"
+						/>
+						<button className="save-btn" onClick={() => handleSave(index)}>
+							Save
+						</button>
+						</>
+					) : (
+						<>
+						<span className="todo-text">{todo}</span>
+						<button
+							className="edit-btn"
+							onClick={() => handleEdit(index)}
+						>
+							Edit
+						</button>
+						<button
+							className="delete-btn"
+							onClick={() => handleDelete(index)}
+						>
+							Delete
+						</button>
+						</>
+					)}
+					</li>
+				))}
+			</ul>
+		)}
+
     </div>
   );
 }
