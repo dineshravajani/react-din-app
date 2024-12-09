@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* DigitalClock.css */
+.digital-clock-container {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 100px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.digital-clock-container h1 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.digital-clock-container p {
+  font-size: 3.5em;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
+
+@media (max-width: 500px) {
+  .digital-clock-container {
+      max-width: 90%;
+  }
+
+  .digital-clock-container h1 {
+      font-size: 2em;
+  }
+
+  .digital-clock-container p {
+      font-size: 3em;
+  }
+}
