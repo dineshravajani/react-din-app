@@ -67,7 +67,7 @@ function Item({item, onDeleteItems, onToggleItem}) {
 function Stats( {items}) {
     if( ! items.length ) {
         return (
-            <p><em>Start adding your items to your list 🚀</em></p>
+            <p className="stats"><em>Start adding your items to your list 🚀</em></p>
         )
     }
     const numItems = items.length
