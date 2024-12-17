@@ -3,7 +3,7 @@ import { useState } from "react";
 function Counter() {
     const [count, setCount] = useState(0);
 
-    const date = new Date('12 December 2024');
+    const date = new Date();
     date.setDate(date.getDate() + count)
     return(
         <div className="steps">

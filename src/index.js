@@ -8,6 +8,8 @@ import DigitalClock from './DigitalClock';
 import Autotype from './Autotype';
 import Steps from './Steps';
 import Counter from './Counter';
+import TravelList from './TravelList';
+import FlashCards from './FlashCards';
 
 const pizzaData = [
 	{
@@ -58,8 +60,11 @@ const pizzaData = [
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-	<Steps/>
-	<Counter/>
+	<FlashCards/>
+	
+	{/* <TravelList/> */}
+	{/* <Steps/> */}
+	{/* <Counter/> */}
 	{/* { <App />} */}
 	{/*}
     { <App />}
